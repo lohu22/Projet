@@ -11,7 +11,7 @@ public class Employe {
     private ArrayList<Projet> historiqueProjets;
 
     public Employe(String nom, String poste, String email, ArrayList<Projet> historiqueProjets){
-        this.id = id ++;
+        this.id = idCompteur ++;
         this.nom = nom;
         this.poste = poste;
         this.email = email;
@@ -57,6 +57,9 @@ public class Employe {
     public ArrayList<Projet> gethistoriqueProjets(){
 
         return historiqueProjets;
+    }
+    public void sethistoriqueProjets(Projet projet){
+        this.historiqueProjets.add(projet);
     }
 
     public void setHistoriqueProjets(){
