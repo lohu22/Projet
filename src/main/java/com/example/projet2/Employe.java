@@ -19,6 +19,7 @@ public class Employe {
     }
 
     public static Employe newEmploye(String nom, String poste, String email, ArrayList<Projet> historiqueProjets){
+
         return new Employe(nom, poste, email, historiqueProjets);
     }
 
@@ -55,7 +56,6 @@ public class Employe {
     }
 
     public ArrayList<Projet> gethistoriqueProjets(){
-
         return historiqueProjets;
     }
     public void sethistoriqueProjets(Projet projet){
@@ -67,7 +67,6 @@ public class Employe {
     }
 
     public String visualisrerInfos(){
-
         return "id:"+ getIdentifiant()+"Nom:"+ getNom()+"Poste:"+ getPoste()+"Email:" + getEmail() ;
     }
     public String afficherHistorique(){

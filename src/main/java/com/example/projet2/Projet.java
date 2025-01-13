@@ -11,7 +11,7 @@ public class Projet {
     private String dateFin;
     private ArrayList<Tache> taches;
     private ArrayList<Employe> membres;
-    private ArrayList<Projet> listeProjets;
+    private static ArrayList<Projet> listeProjets = new ArrayList<>();
 
     public Projet( String nom, String descr, String dateDebut, String dateFin, ArrayList<Tache> taches, ArrayList<Employe> membres) {
         this.id = idCompteur++;
@@ -19,19 +19,20 @@ public class Projet {
         this.descr = descr;
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
-        this.taches = new ArrayList<>();
-        this.membres = new ArrayList<>();
+        this.taches = taches;
+        this.membres = membres;
     }
 
     public int getId(){
         return id;
     }
 
-    public void creerProjet (String nom, String descr, String dateDebut, String dateFin, ArrayList<Tache> taches, ArrayList<Employe> membres){
+    public static void creerProjet ( String nom, String descr, String dateDebut, String dateFin, ArrayList<Tache> taches, ArrayList<Employe> membres){
        Projet newProjet = new Projet(nom, descr,  dateDebut,  dateFin,  taches,  membres);
        listeProjets.add(newProjet);
+
     }
-    public boolean supprimerProjet(ArrayList<Projet> listeProjets, int idProjet) {
+    public boolean supprimerProjet( int idProjet) {
         Iterator<Projet> iterator = listeProjets.iterator();
         while (iterator.hasNext()) {
             Projet projet = iterator.next();
