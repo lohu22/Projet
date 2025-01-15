@@ -13,4 +13,6 @@ module com.example.projet2 {
 
     opens com.example.projet2 to javafx.fxml;
     exports com.example.projet2;
+
+    opens com.example.projet2.Calendrier to javafx.fxml;
 }

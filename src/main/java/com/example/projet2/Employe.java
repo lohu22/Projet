@@ -10,7 +10,7 @@ public class Employe {
     private String email;
     private ArrayList<Projet> historiqueProjets;
     public static ArrayList<Employe> listesEmployes = new ArrayList<>();
-    private ArrayList<Tache> listTache =new ArrayList<>();
+    public ArrayList<Tache> listTache =new ArrayList<>();
 
     public Employe(String nom, String poste, String email, ArrayList<Projet> historiqueProjets){
         this.id = idCompteur ++;
@@ -27,6 +27,7 @@ public class Employe {
     }
 
     public static void supprEmploye(Employe employe){
+
         listesEmployes.remove(employe);
     }
 
@@ -79,7 +80,7 @@ public class Employe {
 
 
     public String visualiserInfos(){
-        return "id:"+ getIdentifiant()+"Nom:"+ getNom()+"Poste:"+ getPoste()+"Email:" + getEmail() ;
+        return ", id:"+ getIdentifiant()+", Nom:"+ getNom()+", Poste:"+ getPoste()+", Email:" + getEmail() ;
     }
     public String afficherHistorique(){
 
