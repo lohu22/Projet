@@ -10,7 +10,7 @@ public class Employe {
     private String email;
     private ArrayList<Projet> historiqueProjets;
     public static ArrayList<Employe> listesEmployes = new ArrayList<>();
-    private ArrayList<String> listTache =new ArrayList<String>();
+    private ArrayList<Tache> listTache =new ArrayList<>();
 
     public Employe(String nom, String poste, String email, ArrayList<Projet> historiqueProjets){
         this.id = idCompteur ++;
@@ -30,7 +30,8 @@ public class Employe {
         listesEmployes.remove(employe);
     }
 
-    public void ajouterTache(String tache) {
+    public void ajouterTache(Tache tache) {
+
         listTache.add(tache);
     }
 

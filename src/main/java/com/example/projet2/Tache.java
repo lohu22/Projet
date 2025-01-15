@@ -7,18 +7,20 @@ public class Tache {
     private int id;
     private String nom;
     private String description;
+    private String commentaire;
     private String priorite;
-    private String statut;
+    private String categorie;
     private String echeance;
 
 
-    // Truc à se mettre d'accord surles attributs
-    public Tache(int id, String nom, String description, String priorite, String statut, String echeance){
+    // Truc à se mettre d'accord sur les attributs
+    public Tache(int id, String nom, String description, String commentaire, String priorite, String categorie, String echeance){
         this.id = id;
         this.nom= nom;
         this.description = description;
         this.priorite = priorite;
-        this.statut = statut;
+        this.commentaire = commentaire;
+        this.categorie = categorie;
         this.echeance = echeance;
     }
 
@@ -30,6 +32,10 @@ public class Tache {
 
     public static void supprEmploye(Employe employe){
 
+    }
+
+    public void attribuerTache (Tache tache, Employe employe){
+        employe.ajouterTache(tache);
     }
 
     public String attribuerTache(Employe id){
