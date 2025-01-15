@@ -1,3 +1,4 @@
+
 package com.example.projet2;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ public class Tache {
     private String priorite;
     private String statut;
     private String echeance;
-    private ArrayList<Employe>listEmploye;
+
 
     // Truc à se mettre d'accord surles attributs
     public Tache(int id, String nom, String description, String priorite, String statut, String echeance){
@@ -19,6 +20,16 @@ public class Tache {
         this.priorite = priorite;
         this.statut = statut;
         this.echeance = echeance;
+    }
+
+    public static void newEmploye(String nom, String poste, String email, ArrayList<Projet> historiqueProjets){
+
+        Employe nvemploye =  new Employe(nom, poste, email, historiqueProjets);
+
+    }
+
+    public static void supprEmploye(Employe employe){
+
     }
 
     public String attribuerTache(Employe id){
