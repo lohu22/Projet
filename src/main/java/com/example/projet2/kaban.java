@@ -12,7 +12,6 @@ public class kaban {
     private Map<String, List<Tache>> kanban;
 
     public kaban() {
-        // Initialiser le Kanban avec des colonnes
         kanban = new HashMap<>();
         kanban.put("À faire", new ArrayList<>());
         kanban.put("En cours", new ArrayList<>());

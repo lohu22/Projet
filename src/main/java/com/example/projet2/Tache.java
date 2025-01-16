@@ -30,9 +30,17 @@ public class Tache {
 
     }
 
-    public static void supprEmploye(Employe employe){
-        ttTaches.remove(employe);
 
+    public static void supprTache(Tache tache) {
+        ttTaches.remove(tache);
+    }
+
+    public void modifierTache(String nom, String description, String priorite, String categorie, String echeance) {
+        if (nom != null) this.nom = nom;
+        if (description != null) this.description = description;
+        if (priorite != null) this.priorite = priorite;
+        if (categorie != null) this.categorie = categorie;
+        if (echeance != null) this.echeance = echeance;
     }
 
     public void ajouterCom (String com){

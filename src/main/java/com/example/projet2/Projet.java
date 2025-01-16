@@ -13,6 +13,7 @@ public class Projet {
     private ArrayList<Employe> membres;
     private static ArrayList<Projet> listeProjets = new ArrayList<>();
 
+
     public Projet( String nom, String descr, String dateDebut, String dateFin, ArrayList<Tache> taches, ArrayList<Employe> membres) {
         this.id = idCompteur++;
         this.nom = nom;
@@ -46,5 +47,11 @@ public class Projet {
         return false;
     }
 
+    public void modifierProjet(String nom, String descr, String dateDebut, String dateFin) {
+        if (nom != null) this.nom = nom;
+        if (descr != null) this.descr = descr;
+        if (dateDebut != null) this.dateDebut = dateDebut;
+        if (dateFin != null) this.dateFin = dateFin;
+    }
 }
 
