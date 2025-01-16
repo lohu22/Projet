@@ -20,7 +20,9 @@ public class kaban {
     }
 
 
-
+    public List<Tache> get(String columnKey) {
+        return kanban.getOrDefault(columnKey, new ArrayList<>());
+    }
 
     public void ajouterTacheKanban(Tache tache) {
 

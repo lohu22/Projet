@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.projet2.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.example.projet2.MainController">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <!-- Menu de navigation -->
+    <left>
+        <VBox spacing="10" padding="10">
+            <Button text="Employés" onAction="#showEmployes"/>
+            <Button text="Projets" onAction="#showProjets"/>
+            <Button text="Tâches" onAction="#showTaches"/>
+            <Button text="Vue Kanban" onAction="#showKanban"/>
+            <Button text="Vue Calendrier" onAction="#showCalendrier"/>
+        </VBox>
+    </left>
+
+    <!-- Zone centrale pour le contenu dynamique -->
+    <center>
+        <StackPane fx:id="contentPane" padding="10">
+            <Label fx:id="welcomeLabel" text="Bienvenue dans l'application de gestion de tâches !"/>
+        </StackPane>
+    </center>
+
+    <!-- Barre d'état -->
+    <bottom>
+        <Label text="Application de gestion de tâches - 2025" style="-fx-padding: 10;"/>
+    </bottom>
+</BorderPane>
